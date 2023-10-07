@@ -1,0 +1,263 @@
+@use '../scss/colors' as *;
+@use '../scss/components' as *;
+
+body {
+	margin: 0 auto;
+	padding: 0;
+
+	font-family: 'Noto Serif Display', serif;
+	font-family: 'Nunito', sans-serif;
+}
+
+.nav {
+	// position: relative;
+	z-index: 10;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.7s;
+	&_items {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: black;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+	}
+	&_item {
+		color: #38b6ff;
+		text-decoration: none;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+}
+
+.active {
+	opacity: 1;
+}
+.burger-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 20;
+	font-size: 36px;
+	color: white;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.header {
+	overflow: hidden;
+	position: relative;
+	height: 90vh;
+	width: 100%;
+	background: $light-blue-gradient,
+		url('../img/european-couple-posing-during-pillow-fight-indoor-portrait-laughing-young-people-chilling-living-room\(1\).jpg');
+	background-size: cover;
+	background-position: top;
+	&-logo {
+		position: absolute;
+		background-image: url('../img/Kamil\ Zielinski.svg');
+		height: 300px;
+		width: 300px;
+		background-position: center;
+		background-size: contain;
+		width: 300px;
+		background-repeat: no-repeat;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.mortgages {
+	overflow: hidden;
+	position: relative;
+	background:$header-gradient, #38b6ff;
+	&__heading-container {
+		margin: 1em auto;
+		padding: 1em;
+		display: flex;
+		max-width: 1000px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		&-heading {
+			font-size: 2rem;
+		}
+		&-lead {
+			font-size: 1.2rem;
+		}
+	}
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+	}
+	&__box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-content: center;
+		width: 100%;
+		height: 480px;
+		margin-bottom: 2em;
+		border: 2px solid white;
+		padding: 1em;
+		border-radius: 15px;
+
+		&-icon {
+			text-align: center;
+			font-size: 3rem;
+			color: white;
+			margin-bottom: 0.3em;
+		}
+		&-heading {
+			text-align: center;
+			font-size: 1.6rem;
+			margin-bottom: 0.3em;
+			color: white;
+		}
+		&-text {
+			padding: 1em;
+			font-size: 1.4rem;
+			margin-bottom: 1em;
+		}
+		&-btn {
+			cursor: pointer;
+			position: absolute;
+			bottom: 2em;
+
+			align-self: center;
+			margin-top: 0.5em;
+			border-radius: 8px;
+			background-color: white;
+			border: none;
+			padding: 1em 1.5em;
+			transition: all 0.4s;
+
+			a {
+				color: #38b6ff;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.why-us {
+	&__boxes {
+		margin-top: 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+	}
+	&__box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-content: center;
+		background:$header-gradient, #38b6ff;
+		width: 80%;
+		height: 330px;
+
+		border: 2px solid white;
+		padding: 1em;
+		border-radius: 15px;
+		&-icon {
+			text-align: center;
+			font-size: 3rem;
+			color: white;
+			margin-bottom: 0.3em;
+		}
+		&-heading {
+			text-align: center;
+			font-size: 1.6rem;
+			margin-bottom: 0.3em;
+			color: white;
+		}
+		&-text {
+			text-align: center;
+			padding: 1em;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+@media (min-width: 767px) {
+	.header {
+		&-logo {
+			height: 500px;
+			width: 500px;
+		}
+	}
+	.mortgages {
+		&__boxes {
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+		&__box {
+			width: 40%;
+		}
+	}
+	.why-us {
+		&__boxes {
+			flex-wrap: wrap;
+			flex-direction: row;
+			
+		}
+		&__box {
+			
+			width: 27%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.mortgages {
+		&__boxes {
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+		&__box {
+			height: 460px;
+			width: 27%;
+			
+		}
+	}
+	.why-us {
+		
+		&__box {
+			height: 270px;
+		}
+	}
+}
+
+@media (min-width: 1300px) {
+	.mortgages {
+		&__box {
+			height: 430px;
+		}
+	}
+}
