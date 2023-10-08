@@ -265,6 +265,12 @@ body {
   padding: 1em;
   font-size: 1.2rem;
 }
+.why-us-lead {
+  font-size: 1.2rem;
+  margin: 1em auto;
+  text-align: center;
+  max-width: 900px;
+}
 
 @media (min-width: 767px) {
   .header-logo {
