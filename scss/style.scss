@@ -86,7 +86,7 @@ body {
 .mortgages {
 	overflow: hidden;
 	position: relative;
-	background:$header-gradient, #38b6ff;
+	background: $header-gradient, #38b6ff;
 	&__heading-container {
 		margin: 1em auto;
 		padding: 1em;
@@ -177,7 +177,7 @@ body {
 		flex-direction: column;
 		justify-content: start;
 		align-content: center;
-		background:$header-gradient, #38b6ff;
+		background: $header-gradient, #38b6ff;
 		width: 80%;
 		height: 100%;
 
@@ -202,18 +202,17 @@ body {
 			font-size: 1.2rem;
 		}
 	}
-	&-lead{
+	&-lead {
 		font-size: 1.2rem;
 		margin: 2em auto;
 		text-align: center;
 		max-width: 900px;
-
 	}
 }
-.reviews{
+.reviews {
 	position: relative;
 	overflow: hidden;
-	background:$header-gradient2, url('../img/architecture-2256489_1920.jpg');
+	background: $header-gradient2, url('../img/architecture-2256489_1920.jpg');
 	background-size: cover;
 	&__boxes {
 		margin-top: 1em;
@@ -229,14 +228,14 @@ body {
 		flex-direction: column;
 		justify-content: start;
 		align-content: center;
-		background:$header-gradient, #38b6ff;
+		background: $header-gradient, #38b6ff;
 		width: 80%;
 		height: 100%;
 
 		// border: 2px solid white;
 		padding: 1em;
 		border-radius: 15px;
-		&-img{
+		&-img {
 			border: 5px solid white;
 			align-self: center;
 			background-size: cover;
@@ -244,25 +243,59 @@ body {
 			height: 120px;
 			width: 120px;
 			border-radius: 50%;
-			&--one{
+			&--one {
 				background-image: url('../img/1.jpg');
 			}
-			&--two{
+			&--two {
 				background-image: url('../img/2.jpg');
 			}
-			&--three{
+			&--three {
 				background-image: url('../img/3.jpg');
 			}
-			
 		}
-		&-text{
+		&-text {
 			margin-top: 1em;
 			padding: 1em;
-			color: white;
+			color: black;
 			text-align: center;
 		}
-}}
+		&-name{
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.2rem;
+			color: white;
+		}
+	}
+}
 
+.contact{
+	position: relative;
+	padding: 10em;
+	position: relative;
+	overflow: hidden;
+	background: $header-gradient, #38b6ff;
+	&__boxes {
+		margin-top: 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+	}
+	&__box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-content: center;
+		background: $header-gradient, #38b6ff;
+		width: 80%;
+		height: 100%;
+
+		// border: 2px solid white;
+		padding: 1em;
+		border-radius: 15px;
+}}
 
 @media (min-width: 767px) {
 	.header {
@@ -285,10 +318,8 @@ body {
 		&__boxes {
 			flex-wrap: wrap;
 			flex-direction: row;
-			
 		}
 		&__box {
-			
 			width: 27%;
 		}
 	}
@@ -296,10 +327,8 @@ body {
 		&__boxes {
 			flex-wrap: wrap;
 			flex-direction: row;
-			
 		}
 		&__box {
-			
 			width: 27%;
 		}
 	}
@@ -315,11 +344,9 @@ body {
 		&__box {
 			height: 480px;
 			width: 27%;
-			
 		}
 	}
 	.why-us {
-		
 		&__box {
 			height: 270px;
 		}

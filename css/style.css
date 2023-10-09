@@ -320,8 +320,42 @@ body {
 .reviews__box-text {
   margin-top: 1em;
   padding: 1em;
-  color: white;
+  color: black;
   text-align: center;
+}
+.reviews__box-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.contact {
+  position: relative;
+  padding: 10em;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), #38b6ff;
+}
+.contact__boxes {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.contact__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), #38b6ff;
+  width: 80%;
+  height: 100%;
+  padding: 1em;
+  border-radius: 15px;
 }
 
 @media (min-width: 767px) {
