@@ -236,6 +236,7 @@ body {
   gap: 1em;
 }
 .why-us__box {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -243,7 +244,7 @@ body {
   align-content: center;
   background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), #38b6ff;
   width: 80%;
-  height: 330px;
+  height: 100%;
   border: 2px solid white;
   padding: 1em;
   border-radius: 15px;
@@ -267,9 +268,60 @@ body {
 }
 .why-us-lead {
   font-size: 1.2rem;
-  margin: 1em auto;
+  margin: 2em auto;
   text-align: center;
   max-width: 900px;
+}
+
+.reviews {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.75), rgba(0, 0, 0, 0.7)), url("../img/architecture-2256489_1920.jpg");
+  background-size: cover;
+}
+.reviews__boxes {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.reviews__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), #38b6ff;
+  width: 80%;
+  height: 100%;
+  padding: 1em;
+  border-radius: 15px;
+}
+.reviews__box-img {
+  border: 5px solid white;
+  align-self: center;
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.reviews__box-img--one {
+  background-image: url("../img/1.jpg");
+}
+.reviews__box-img--two {
+  background-image: url("../img/2.jpg");
+}
+.reviews__box-img--three {
+  background-image: url("../img/3.jpg");
+}
+.reviews__box-text {
+  margin-top: 1em;
+  padding: 1em;
+  color: white;
+  text-align: center;
 }
 
 @media (min-width: 767px) {
@@ -292,6 +344,13 @@ body {
   .why-us__box {
     width: 27%;
   }
+  .reviews__boxes {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .reviews__box {
+    width: 27%;
+  }
 }
 @media (min-width: 992px) {
   .mortgages__boxes {
@@ -300,7 +359,7 @@ body {
     justify-content: space-evenly;
   }
   .mortgages__box {
-    height: 460px;
+    height: 480px;
     width: 27%;
   }
   .why-us__box {
