@@ -353,12 +353,12 @@ body {
 }
 .contact__box-info {
   display: flex;
-  margin: 2em;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
 }
 .contact__box-info-details {
-  margin-right: 4em;
+  margin-top: 1em;
   text-align: center;
   color: white;
 }

@@ -277,6 +277,7 @@ body {
 		color: white;
 	}
 	&__boxes {
+		
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -288,17 +289,16 @@ body {
 		margin-top: 5em;
 		display: flex;
 		flex-direction: column;
-		;
-
 		&-info {
 			display: flex;
-			margin: 2em;
-			
-			justify-content: space-around;
+			// margin: 2em;
+
+			flex-direction: column;
+			justify-content: center;
 			align-content: center;
 
 			&-details {
-				margin-right: 4em;
+				margin-top: 1em;
 				text-align: center;
 				color: white;
 				&-icon {
@@ -383,21 +383,18 @@ body {
 			flex-wrap: wrap;
 			flex-direction: row;
 			justify-content: space-around;
-			
 		}
-		&__box{
+		&__box {
 			width: 40%;
-			&-info{
+			&-info {
 				flex-direction: column;
-				&-details{
+				&-details {
 					margin: 0.5em;
 				}
-				
 			}
-			&-form{
+			&-form {
 				width: 40%;
 			}
-			
 		}
 	}
 }
