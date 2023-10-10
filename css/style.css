@@ -332,30 +332,71 @@ body {
 
 .contact {
   position: relative;
-  padding: 10em;
-  position: relative;
   overflow: hidden;
   background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), #38b6ff;
 }
+.contact .section-heading {
+  color: white;
+}
 .contact__boxes {
-  margin-top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 2em;
 }
 .contact__box {
-  position: relative;
+  width: 50%;
+  margin-top: 5em;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+}
+.contact__box-info {
+  display: flex;
+  margin: 2em;
+  justify-content: space-around;
   align-content: center;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), #38b6ff;
+}
+.contact__box-info-details {
+  margin-right: 4em;
+  text-align: center;
+  color: white;
+}
+.contact__box-info-details-icon {
+  font-size: 2rem;
+}
+.contact__box-form {
   width: 80%;
-  height: 100%;
-  padding: 1em;
-  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact__box-form label {
+  margin-top: 1em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.contact__box-form textarea,
+.contact__box-form input {
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+}
+.contact__box-form input {
+  height: 30px;
+}
+.contact__box-form textarea {
+  height: 200px;
+}
+.contact__box-form button {
+  text-transform: uppercase;
+  width: 40%;
+  margin-top: 1em;
+  border: none;
+  border-radius: 8px;
+  padding: 1em 1.5em;
 }
 
 @media (min-width: 767px) {
@@ -384,6 +425,23 @@ body {
   }
   .reviews__box {
     width: 27%;
+  }
+  .contact__boxes {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .contact__box {
+    width: 40%;
+  }
+  .contact__box-info {
+    flex-direction: column;
+  }
+  .contact__box-info-details {
+    margin: 0.5em;
+  }
+  .contact__box-form {
+    width: 40%;
   }
 }
 @media (min-width: 992px) {

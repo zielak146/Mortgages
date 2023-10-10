@@ -259,7 +259,7 @@ body {
 			color: black;
 			text-align: center;
 		}
-		&-name{
+		&-name {
 			text-align: center;
 			font-weight: bold;
 			font-size: 1.2rem;
@@ -268,34 +268,80 @@ body {
 	}
 }
 
-.contact{
-	position: relative;
-	padding: 10em;
+.contact {
 	position: relative;
 	overflow: hidden;
 	background: $header-gradient, #38b6ff;
+
+	.section-heading {
+		color: white;
+	}
 	&__boxes {
-		margin-top: 1em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 1em;
+		gap: 2em;
 	}
 	&__box {
-		position: relative;
+		width: 50%;
+		margin-top: 5em;
 		display: flex;
 		flex-direction: column;
-		justify-content: start;
-		align-content: center;
-		background: $header-gradient, #38b6ff;
-		width: 80%;
-		height: 100%;
+		;
 
-		// border: 2px solid white;
-		padding: 1em;
-		border-radius: 15px;
-}}
+		&-info {
+			display: flex;
+			margin: 2em;
+			
+			justify-content: space-around;
+			align-content: center;
+
+			&-details {
+				margin-right: 4em;
+				text-align: center;
+				color: white;
+				&-icon {
+					font-size: 2rem;
+				}
+			}
+		}
+		&-form {
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			label {
+				margin-top: 1em;
+				text-transform: uppercase;
+				color: white;
+				text-align: center;
+				// font-size: 1.4rem;
+			}
+			textarea,
+			input {
+				border-radius: 8px;
+				border: none;
+				width: 100%;
+			}
+			input {
+				height: 30px;
+			}
+			textarea {
+				height: 200px;
+			}
+			button {
+				text-transform: uppercase;
+				width: 40%;
+				margin-top: 1em;
+				border: none;
+				border-radius: 8px;
+				padding: 1em 1.5em;
+			}
+		}
+	}
+}
 
 @media (min-width: 767px) {
 	.header {
@@ -330,6 +376,28 @@ body {
 		}
 		&__box {
 			width: 27%;
+		}
+	}
+	.contact {
+		&__boxes {
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-around;
+			
+		}
+		&__box{
+			width: 40%;
+			&-info{
+				flex-direction: column;
+				&-details{
+					margin: 0.5em;
+				}
+				
+			}
+			&-form{
+				width: 40%;
+			}
+			
 		}
 	}
 }
