@@ -286,7 +286,7 @@ body {
   justify-content: start;
   align-content: center;
   width: 100%;
-  height: 480px;
+  height: 100%;
   margin-bottom: 2em;
   padding: 1em;
   border-radius: 15px;
@@ -310,8 +310,6 @@ body {
 }
 .mortgages__box-btn {
   cursor: pointer;
-  position: absolute;
-  bottom: 2em;
   align-self: center;
   margin-top: 0.5em;
   border-radius: 8px;
@@ -393,7 +391,7 @@ body {
   justify-content: start;
   align-content: center;
   background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), #38b6ff;
-  width: 80%;
+  width: 90%;
   height: 100%;
   padding: 1em;
   border-radius: 15px;
@@ -526,7 +524,52 @@ body {
   text-align: center;
   color: white;
 }
+.footer__box-links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+}
+.footer__box-links-services, .footer__box-links-about {
+  display: flex;
+  flex-direction: column;
+}
+.footer__box-link {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0.5em;
+  cursor: pointer;
+  color: #38b6ff;
+  text-decoration: none;
+}
+.footer__box-link i {
+  font-size: 1.4rem;
+  margin-right: 0.5em;
+}
 
+@media (min-width: 576px) {
+  .mortgages hr {
+    display: none;
+  }
+  .mortgages__boxes {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .mortgages__box {
+    height: 480px;
+    border: 2px solid white;
+    width: 40%;
+  }
+  .mortgages__box-btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 2em;
+  }
+}
 @media (min-width: 767px) {
   .header-logo {
     height: 500px;
@@ -575,8 +618,17 @@ body {
   .contact__box-form {
     width: 40%;
   }
+  .footer__boxes {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .footer__box-links {
+    flex-direction: row;
+    gap: 4em;
+  }
 }
-@media (min-width: 992px) {
+@media (min-width: 767px) and (min-width: 992px) {
   .mortgages__boxes {
     flex-wrap: wrap;
     flex-direction: row;
@@ -590,7 +642,7 @@ body {
     height: 270px;
   }
 }
-@media (min-width: 1300px) {
+@media (min-width: 767px) and (min-width: 1300px) {
   .mortgages__box {
     height: 430px;
   }

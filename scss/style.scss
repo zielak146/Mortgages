@@ -82,7 +82,7 @@ body {
 
 		background-repeat: no-repeat;
 	}
-	.arrow{
+	.arrow {
 		position: absolute;
 		color: #38b6ff;
 		bottom: 2em;
@@ -127,7 +127,7 @@ body {
 		justify-content: start;
 		align-content: center;
 		width: 100%;
-		height: 480px;
+		height: 100%;
 		margin-bottom: 2em;
 		// border: 2px solid white;
 		padding: 1em;
@@ -152,8 +152,8 @@ body {
 		}
 		&-btn {
 			cursor: pointer;
-			position: absolute;
-			bottom: 2em;
+			// position: absolute;
+			// bottom: 0.2em;
 
 			align-self: center;
 			margin-top: 0.5em;
@@ -240,7 +240,7 @@ body {
 		justify-content: start;
 		align-content: center;
 		background: $header-gradient, #38b6ff;
-		width: 80%;
+		width: 90%;
 		height: 100%;
 
 		// border: 2px solid white;
@@ -379,6 +379,58 @@ body {
 			text-align: center;
 			color: white;
 		}
+		&-links {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: space-around;
+			align-content: center;
+			// gap: 4em;
+			text-align: center;
+			
+			&-services,
+			&-about {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		&-link {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			padding: 0.5em;
+			cursor: pointer;
+			color:#38b6ff;
+			text-decoration: none;
+			
+			i{
+				font-size: 1.4rem;
+				margin-right: 0.5em;
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.mortgages {
+		hr {
+			display: none;
+		}
+		&__boxes {
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+		&__box {
+			height: 480px;
+			border: 2px solid white;
+			width: 40%;
+			&-btn {
+				cursor: pointer;
+				position: absolute;
+				bottom: 2em;
+			}
+		}
 	}
 }
 
@@ -440,7 +492,20 @@ body {
 			}
 		}
 	}
-}
+	.footer {
+		&__boxes{
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			
+		}
+		&__box{
+			&-links {
+				flex-direction: row;
+				gap: 4em;
+		}
+		
+}}
 
 @media (min-width: 992px) {
 	.mortgages {
@@ -467,4 +532,5 @@ body {
 			height: 430px;
 		}
 	}
+}
 }
