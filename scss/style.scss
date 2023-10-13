@@ -20,16 +20,12 @@ body {
 	background: none;
 	width: 100%;
 	height: 100%;
-	opacity: 0;
-	transition: opacity 0.7s;
+	display: none;
+	transition: all 0.7s;
 	&_items {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
+		height: 100%;
+		width: 100%;
 		background-color: black;
-
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -45,7 +41,8 @@ body {
 }
 
 .active {
-	opacity: 1;
+	display: block;
+	transition: .7s;
 }
 .burger-btn {
 	position: absolute;
@@ -74,7 +71,7 @@ body {
 	&-logo {
 		position: absolute;
 		top: 20%;
-		background-image: url('../img/Kamil\ Zielinski.svg');
+		background-image: url('../img/housefy.svg');
 		height: 300px;
 		width: 300px;
 		background-position: center;
@@ -161,7 +158,10 @@ body {
 			background-color: white;
 			border: none;
 			padding: 1em 1.5em;
-			transition: all 0.4s;
+			transition: opacity 0.4s;
+			&:hover{
+				opacity: 0.7;
+			}
 
 			a {
 				color: #38b6ff;
@@ -212,13 +212,19 @@ body {
 			padding: 1em;
 			font-size: 1.2rem;
 		}
+		&-leads{
+			margin-top: 2em;
+			&-text{
+				font-size: 1.2rem;
+				margin: 0.5em auto;
+				text-align: center;
+				max-width: 900px;
+			}
+		}
 	}
-	&-lead {
-		font-size: 1.2rem;
-		margin: 2em auto;
-		text-align: center;
-		max-width: 900px;
-	}
+
+
+	
 }
 .reviews {
 	position: relative;
@@ -367,7 +373,7 @@ body {
 		justify-content: center;
 		align-content: center;
 		&-logo {
-			background-image: url('../img/Kamil\ Zielinski.png');
+			background-image: url('../img/housefy.png');
 			height: 300px;
 			background-position: center;
 			background-size: cover;
@@ -387,7 +393,7 @@ body {
 			align-content: center;
 			// gap: 4em;
 			text-align: center;
-			
+
 			&-services,
 			&-about {
 				display: flex;
@@ -401,10 +407,14 @@ body {
 			padding: 0.5em;
 			font-size: 1.2rem;
 			cursor: pointer;
-			color:#38b6ff;
+			color: #38b6ff;
 			text-decoration: none;
-			
-			i{
+			transition: color .4s;
+			&:hover{
+				color: white;
+			}
+
+			i {
 				font-size: 1.4rem;
 				margin-right: 0.5em;
 			}
@@ -440,6 +450,7 @@ body {
 		&-logo {
 			height: 500px;
 			width: 500px;
+			top:5%;
 		}
 	}
 	.mortgages {
@@ -494,44 +505,43 @@ body {
 		}
 	}
 	.footer {
-		&__boxes{
+		&__boxes {
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-around;
-			
 		}
-		&__box{
+		&__box {
 			&-links {
 				flex-direction: row;
 				gap: 4em;
+			}
 		}
-		
-}}
+	}
 
-@media (min-width: 992px) {
-	.mortgages {
-		&__boxes {
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: space-evenly;
+	@media (min-width: 992px) {
+		.mortgages {
+			&__boxes {
+				flex-wrap: wrap;
+				flex-direction: row;
+				justify-content: space-evenly;
+			}
+			&__box {
+				height: 480px;
+				width: 27%;
+			}
 		}
-		&__box {
-			height: 480px;
-			width: 27%;
+		.why-us {
+			&__box {
+				height: 270px;
+			}
 		}
 	}
-	.why-us {
-		&__box {
-			height: 270px;
-		}
-	}
-}
 
-@media (min-width: 1300px) {
-	.mortgages {
-		&__box {
-			height: 430px;
+	@media (min-width: 1300px) {
+		.mortgages {
+			&__box {
+				height: 430px;
+			}
 		}
 	}
-}
 }

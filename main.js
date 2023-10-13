@@ -10,8 +10,8 @@ const handleNav = () => {
 
 handleNav();
 
-navItems.forEach(item => {
-    item.addEventListener('click', () => {
-        navBar.classList.remove('active')
-    })
-})
+navItems.forEach((item) => {
+	item.addEventListener('click', () => {
+		navBar.classList.remove('active');
+	});
+});
