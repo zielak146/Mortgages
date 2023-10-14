@@ -5,7 +5,7 @@
 }
 
 .section-padding {
-  padding: 4em 2em;
+  padding: 6em 2em;
 }
 
 .section-heading {
@@ -265,6 +265,7 @@ body {
   align-items: center;
 }
 .mortgages__heading-container-heading {
+  color: white;
   font-size: 2rem;
 }
 .mortgages__heading-container-lead {
@@ -382,6 +383,9 @@ body {
   overflow: hidden;
   background: linear-gradient(45deg, rgba(190, 52, 85, 0.75), rgba(0, 0, 0, 0.7)), url("../img/architecture-2256489_1920.jpg");
   background-size: cover;
+}
+.reviews .section-heading {
+  color: white;
 }
 .reviews__boxes {
   margin-top: 1em;
