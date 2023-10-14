@@ -33,7 +33,7 @@ body {
 		gap: 2em;
 	}
 	&_item {
-		color: #38b6ff;
+		color: $viva;
 		text-decoration: none;
 		font-size: 1.4rem;
 		text-transform: uppercase;
@@ -42,7 +42,7 @@ body {
 
 .active {
 	display: block;
-	transition: .7s;
+	transition: 0.7s;
 }
 .burger-btn {
 	position: absolute;
@@ -71,7 +71,7 @@ body {
 	&-logo {
 		position: absolute;
 		top: 20%;
-		background-image: url('../img/housefy.svg');
+		background-image: url('../img/housefy-viva.svg');
 		height: 300px;
 		width: 300px;
 		background-position: center;
@@ -81,7 +81,7 @@ body {
 	}
 	.arrow {
 		position: absolute;
-		color: #38b6ff;
+		color: $viva;
 		bottom: 2em;
 		font-size: 2.4em;
 	}
@@ -94,7 +94,7 @@ body {
 	}
 	overflow: hidden;
 	position: relative;
-	background: $header-gradient, #38b6ff;
+	background: $header-gradient, $viva;
 	&__heading-container {
 		margin: 1em auto;
 		padding: 1em;
@@ -124,13 +124,16 @@ body {
 		justify-content: start;
 		align-content: center;
 		width: 100%;
-		height: 100%;
+		height: 450px;
 		margin-bottom: 2em;
 		// border: 2px solid white;
 		padding: 1em;
-		border-radius: 15px;
+		
+		
+		
 
 		&-icon {
+			margin-top: 0.5em;
 			text-align: center;
 			font-size: 3rem;
 			color: white;
@@ -143,28 +146,30 @@ body {
 			color: white;
 		}
 		&-text {
+			position: relative;
 			padding: 1em;
-			font-size: 1.4rem;
-			margin-bottom: 1em;
+			font-size: 1.2rem;
+			// margin-bottom: 1em;
 		}
 		&-btn {
 			cursor: pointer;
-			// position: absolute;
-			// bottom: 0.2em;
+			margin-top: 2em;
+			position: absolute;
+			bottom: 0.2em;
 
 			align-self: center;
-			margin-top: 0.5em;
+			
 			border-radius: 8px;
 			background-color: white;
 			border: none;
 			padding: 1em 1.5em;
 			transition: opacity 0.4s;
-			&:hover{
+			&:hover {
 				opacity: 0.7;
 			}
 
 			a {
-				color: #38b6ff;
+				color: $viva;
 				text-decoration: none;
 				text-transform: uppercase;
 			}
@@ -188,12 +193,12 @@ body {
 		flex-direction: column;
 		justify-content: start;
 		align-content: center;
-		background: $header-gradient, #38b6ff;
-		width: 80%;
+		background: $header-gradient, $viva;
+		width: 90%;
 		height: 100%;
 
 		border: 2px solid white;
-		padding: 1em;
+		padding: 2.5em 1.5em;
 		border-radius: 15px;
 		&-icon {
 			text-align: center;
@@ -212,9 +217,9 @@ body {
 			padding: 1em;
 			font-size: 1.2rem;
 		}
-		&-leads{
+		&-leads {
 			margin-top: 2em;
-			&-text{
+			&-text {
 				font-size: 1.2rem;
 				margin: 0.5em auto;
 				text-align: center;
@@ -222,14 +227,12 @@ body {
 			}
 		}
 	}
-
-
-	
 }
 .reviews {
+	padding: 8em 2em;
 	position: relative;
 	overflow: hidden;
-	background: $header-gradient2, url('../img/architecture-2256489_1920.jpg');
+	background: $header-gradient-viva, url('../img/architecture-2256489_1920.jpg');
 	background-size: cover;
 	&__boxes {
 		margin-top: 1em;
@@ -237,7 +240,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 1em;
+		gap: 3em;
 	}
 	&__box {
 		position: relative;
@@ -245,7 +248,7 @@ body {
 		flex-direction: column;
 		justify-content: start;
 		align-content: center;
-		background: $header-gradient, #38b6ff;
+		background: $header-gradient, $viva;
 		width: 90%;
 		height: 100%;
 
@@ -288,7 +291,7 @@ body {
 .contact {
 	position: relative;
 	overflow: hidden;
-	background: $header-gradient, #38b6ff;
+	background: $header-gradient, $viva;
 
 	.section-heading {
 		color: white;
@@ -360,7 +363,7 @@ body {
 }
 
 .footer {
-	background-color: rgb(0, 0, 50);
+	background-color: $viva;
 	&__boxes {
 		display: flex;
 		flex-direction: column;
@@ -373,7 +376,7 @@ body {
 		justify-content: center;
 		align-content: center;
 		&-logo {
-			background-image: url('../img/housefy.png');
+			background-image: url('../img/housefy-white.png');
 			height: 300px;
 			background-position: center;
 			background-size: cover;
@@ -407,11 +410,11 @@ body {
 			padding: 0.5em;
 			font-size: 1.2rem;
 			cursor: pointer;
-			color: #38b6ff;
+			color: white;
 			text-decoration: none;
-			transition: color .4s;
-			&:hover{
-				color: white;
+			transition: color 0.4s;
+			&:hover {
+				color: rgb(97, 97, 97);
 			}
 
 			i {
@@ -424,23 +427,24 @@ body {
 
 @media (min-width: 576px) {
 	.mortgages {
-		hr {
+		hr{
 			display: none;
 		}
 		&__boxes {
 			flex-wrap: wrap;
 			flex-direction: row;
-			justify-content: space-evenly;
+			justify-content: space-around;
 		}
 		&__box {
-			height: 480px;
-			border: 2px solid white;
+			padding-bottom: 1em;
+			border-top: 2px solid white;
+			border-bottom: 2px solid white;
+
 			width: 40%;
-			&-btn {
-				cursor: pointer;
-				position: absolute;
+			&-btn{
 				bottom: 2em;
 			}
+			
 		}
 	}
 }
@@ -450,7 +454,7 @@ body {
 		&-logo {
 			height: 500px;
 			width: 500px;
-			top:5%;
+			top: 5%;
 		}
 	}
 	.mortgages {
@@ -463,7 +467,6 @@ body {
 			justify-content: space-evenly;
 		}
 		&__box {
-			border: 2px solid white;
 			width: 40%;
 		}
 	}
