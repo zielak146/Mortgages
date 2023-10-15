@@ -7,10 +7,11 @@
 }
 
 .section-padding {
-	padding: 6em 2em;
+	padding: 6em 3em;
 }
 .section-heading{
-    font-size: 2.4rem;
+	
+    font-size: 2rem;
     letter-spacing: -2px;
     text-align: center;
 	font-weight: bold;
@@ -34,11 +35,15 @@
 
 }
 
+.white-section{
+	background-color: rgb(232, 230, 230);;
+}
+
 .white-block {
 	position: absolute;
 	height: 35px;
 	width: 60%;
-	background-color:$pure-white;
+	background-color:rgb(232, 230, 230);;
 	
 
 	&-left {
