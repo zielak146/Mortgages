@@ -13,11 +13,12 @@
   letter-spacing: -2px;
   text-align: center;
   font-weight: bold;
-  color: rgb(190, 52, 85);
+  color: rgb(56, 182, 255);
 }
 
 .lead {
   text-align: center;
+  font-size: 1.4rem;
 }
 
 .container {
@@ -39,7 +40,7 @@
   transform: skew(45deg);
 }
 .white-block-left--gray {
-  background-color: rgb(190, 52, 85);
+  background-color: rgb(56, 182, 255);
 }
 .white-block-right {
   top: -2px;
@@ -232,7 +233,7 @@ body {
 .header-logo {
   position: absolute;
   top: 20%;
-  background-image: url("../img/housefy-viva.svg");
+  background-image: url("../img/housefy.svg");
   height: 300px;
   width: 300px;
   background-position: center;
@@ -241,7 +242,7 @@ body {
 }
 .header .arrow {
   position: absolute;
-  color: rgb(190, 52, 85);
+  color: rgb(56, 182, 255);
   bottom: 2em;
   font-size: 2.4em;
 }
@@ -249,7 +250,10 @@ body {
 .mortgages {
   overflow: hidden;
   position: relative;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(190, 52, 85);
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.75), rgba(0, 0, 0, 0.7)), url("../img/shibuyasky-4768679_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 .mortgages hr {
   color: white;
@@ -269,7 +273,8 @@ body {
   font-size: 2rem;
 }
 .mortgages__heading-container-lead {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: rgb(232, 230, 230);
 }
 .mortgages__boxes {
   display: flex;
@@ -284,9 +289,11 @@ body {
   flex-direction: column;
   justify-content: start;
   align-content: center;
-  width: 100%;
+  width: 90%;
   height: 450px;
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
   margin-bottom: 2em;
+  border-radius: 8px;
   padding: 1em;
 }
 .mortgages__box-icon {
@@ -306,12 +313,13 @@ body {
   position: relative;
   padding: 1em;
   font-size: 1.2rem;
+  color: white;
 }
 .mortgages__box-btn {
   cursor: pointer;
   margin-top: 2em;
   position: absolute;
-  bottom: 0.2em;
+  bottom: 0.7em;
   align-self: center;
   border-radius: 8px;
   background-color: white;
@@ -323,7 +331,7 @@ body {
   opacity: 0.7;
 }
 .mortgages__box-btn a {
-  color: rgb(190, 52, 85);
+  color: rgb(56, 182, 255);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -343,7 +351,7 @@ body {
   flex-direction: column;
   justify-content: start;
   align-content: center;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(190, 52, 85);
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
   width: 90%;
   height: 100%;
   border: 2px solid white;
@@ -366,23 +374,27 @@ body {
   text-align: center;
   padding: 1em;
   font-size: 1.2rem;
+  color: rgb(232, 230, 230);
 }
 .why-us__box-leads {
   margin-top: 2em;
 }
 .why-us__box-leads-text {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 0.5em auto;
   text-align: center;
   max-width: 900px;
+  color: rgb(56, 182, 255);
 }
 
 .reviews {
   padding: 8em 2em;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(45deg, rgba(190, 52, 85, 0.75), rgba(0, 0, 0, 0.7)), url("../img/architecture-2256489_1920.jpg");
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.75), rgba(0, 0, 0, 0.7)), url("../img/architecture-2256489_1920.jpg");
   background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .reviews .section-heading {
   color: white;
@@ -401,7 +413,7 @@ body {
   flex-direction: column;
   justify-content: start;
   align-content: center;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(190, 52, 85);
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
   width: 90%;
   height: 100%;
   padding: 1em;
@@ -441,7 +453,7 @@ body {
 .contact {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(190, 52, 85);
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
 }
 .contact .section-heading {
   color: white;
@@ -508,7 +520,9 @@ body {
 }
 
 .footer {
-  background-color: rgb(190, 52, 85);
+  background: linear-gradient(45deg, rgba(56, 182, 255, 0.95), rgba(56, 182, 255, 0.95)), url("../img/23485395_44.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 .footer__boxes {
   display: flex;
@@ -559,7 +573,7 @@ body {
   transition: color 0.4s;
 }
 .footer__box-link:hover {
-  color: rgb(97, 97, 97);
+  color: rgb(56, 182, 255);
 }
 .footer__box-link i {
   font-size: 1.4rem;
@@ -567,9 +581,6 @@ body {
 }
 
 @media (min-width: 576px) {
-  .mortgages hr {
-    display: none;
-  }
   .mortgages__boxes {
     flex-wrap: wrap;
     flex-direction: row;
@@ -577,8 +588,6 @@ body {
   }
   .mortgages__box {
     padding-bottom: 1em;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
     width: 40%;
   }
   .mortgages__box-btn {
@@ -590,9 +599,6 @@ body {
     height: 500px;
     width: 500px;
     top: 5%;
-  }
-  .mortgages hr {
-    display: none;
   }
   .mortgages__boxes {
     flex-wrap: wrap;

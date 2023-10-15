@@ -16,12 +16,13 @@
 	font-weight: bold;
 	
     // text-transform: uppercase;
-    color: $viva;
+    color: $main-color;
 	// width: 500px;
 
 }
 .lead{
 	text-align: center;
+	font-size: 1.4rem;
 	
 }
 .container{
@@ -45,7 +46,7 @@
 		left: -50px;
 		transform: skew(45deg);
 		&--gray{
-			background-color: $viva;;
+			background-color: $main-color;;
 		}
 	}
 	&-right {
