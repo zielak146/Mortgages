@@ -43,7 +43,7 @@
   left: -50px;
   transform: skew(45deg);
 }
-.white-block-left--gray {
+.white-block-left--blue {
   background-color: rgb(56, 182, 255);
 }
 .white-block-right {
@@ -199,7 +199,7 @@ body {
   gap: 2em;
 }
 .nav_item {
-  color: rgb(190, 52, 85);
+  color: rgb(56, 182, 255);
   text-decoration: none;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -440,8 +440,8 @@ body {
   align-self: center;
   background-size: cover;
   background-position: center;
-  height: 120px;
-  width: 120px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
 }
 .reviews__box-img--one {
@@ -460,6 +460,73 @@ body {
   text-align: center;
 }
 .reviews__box-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.team {
+  padding: 8em 2em;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.75), rgba(0, 0, 0, 0.7)), url("../img/interior-5114392_1920.jpg");
+  background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.team .section-heading {
+  color: white;
+  padding: 1em;
+}
+.team__boxes {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+.team__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
+  width: 90%;
+  height: 100%;
+  padding: 1em;
+  border-radius: 15px;
+  transition: scale 0.7s;
+}
+.team__box:hover {
+  scale: 1.1;
+}
+.team__box-img {
+  border: 5px solid white;
+  align-self: center;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.team__box-img--one {
+  background-image: url("../img/1.jpg");
+}
+.team__box-img--two {
+  background-image: url("../img/2.jpg");
+}
+.team__box-img--three {
+  background-image: url("../img/3.jpg");
+}
+.team__box-title {
+  margin-top: 1em;
+  color: rgb(232, 230, 230);
+  text-align: center;
+}
+.team__box-name {
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
@@ -637,6 +704,13 @@ body {
     flex-direction: row;
   }
   .reviews__box {
+    width: 27%;
+  }
+  .team__boxes {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .team__box {
     width: 27%;
   }
   .contact__boxes {

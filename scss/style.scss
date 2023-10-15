@@ -33,7 +33,7 @@ body {
 		gap: 2em;
 	}
 	&_item {
-		color: $viva;
+		color: $main-color;
 		text-decoration: none;
 		font-size: 1.4rem;
 		text-transform: uppercase;
@@ -282,8 +282,8 @@ body {
 			align-self: center;
 			background-size: cover;
 			background-position: center;
-			height: 120px;
-			width: 120px;
+			height: 150px;
+			width: 150px;
 			border-radius: 50%;
 			&--one {
 				background-image: url('../img/1.jpg');
@@ -309,6 +309,77 @@ body {
 		}
 	}
 }
+
+.team {
+	padding: 8em 2em;
+	position: relative;
+	overflow: hidden;
+	background: $header-gradient2, url('../img/interior-5114392_1920.jpg');
+	background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	.section-heading {
+		color: white;
+		padding: 1em;
+	}
+	&__boxes {
+		margin-top: 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 3em;
+	}
+	&__box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-content: center;
+		background: $header-gradient, $main-color;
+		width: 90%;
+		height: 100%;
+
+		// border: 2px solid white;
+		padding: 1em;
+		border-radius: 15px;
+		transition: scale 0.7s;
+		&:hover{
+			scale: 1.1;
+		}
+		&-img {
+			border: 5px solid white;
+			align-self: center;
+			background-size: cover;
+			background-position: center;
+			height: 200px;
+			width: 200px;
+			border-radius: 50%;
+			&--one {
+				background-image: url('../img/1.jpg');
+			}
+			&--two {
+				background-image: url('../img/2.jpg');
+			}
+			&--three {
+				background-image: url('../img/3.jpg');
+			}
+		}
+		&-title {
+			margin-top: 1em;
+			
+			color: rgb(232, 230, 230);;
+			text-align: center;
+		}
+		&-name {
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.2rem;
+			color: white;
+		}
+	}
+}
+
 
 .contact {
 	position: relative;
@@ -497,6 +568,15 @@ body {
 		}
 	}
 	.reviews {
+		&__boxes {
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		&__box {
+			width: 27%;
+		}
+	}
+	.team {
 		&__boxes {
 			flex-wrap: wrap;
 			flex-direction: row;
