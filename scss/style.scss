@@ -21,7 +21,7 @@ body {
 	width: 100%;
 	height: 100%;
 	transform: translateX(100%);
-	filter: blur(40px);
+	filter: blur(5px);
 	transition: all 0.7s;
 	&_items {
 		height: 100%;
@@ -115,10 +115,6 @@ body {
 }
 
 .mortgages {
-	hr {
-		color: white;
-		width: 100%;
-	}
 	overflow: hidden;
 	position: relative;
 	background: $header-gradient2, url('../img/shibuyasky-4768679_1920.jpg');
@@ -126,8 +122,8 @@ body {
 	background-position: center;
 	background-attachment: fixed;
 	&__heading-container {
-		margin: 1em auto;
-		padding: 1em;
+		margin: 3em auto;
+
 		display: flex;
 		max-width: 1000px;
 		flex-direction: column;
@@ -149,7 +145,6 @@ body {
 		justify-content: center;
 		align-items: center;
 		gap: 1em;
-	
 	}
 	&__box {
 		position: relative;
@@ -164,10 +159,7 @@ body {
 		border-radius: 8px;
 		padding: 1em;
 		transition: scale 0.7s;
-		&:hover {
-			scale: 1.1;
-		}
-		
+
 		&-icon {
 			margin-top: 0.5em;
 			text-align: center;
@@ -212,7 +204,6 @@ body {
 			}
 		}
 	}
-	
 }
 
 .why-us {
@@ -224,7 +215,6 @@ body {
 		justify-content: center;
 		align-items: center;
 		gap: 2em;
-		
 	}
 
 	&__box {
@@ -268,12 +258,6 @@ body {
 				color: $main-color;
 			}
 		}
-	}
-	&__box:nth-child(2){
-		transition-delay:800ms ;
-	}
-	&__box:nth-child(3){
-		transition-delay:400ms ;
 	}
 }
 .reviews {
@@ -346,7 +330,7 @@ body {
 }
 
 .team {
-	padding: 8em 2em;
+	padding: 6em 2em;
 	position: relative;
 	overflow: hidden;
 	background: $header-gradient2, url('../img/interior-5114392_1920.jpg');
@@ -379,9 +363,7 @@ body {
 		padding: 1em;
 		border-radius: 15px;
 		transition: scale 0.7s;
-		&:hover {
-			scale: 1.1;
-		}
+
 		&-img {
 			border: 5px solid white;
 			align-self: center;
@@ -402,7 +384,7 @@ body {
 		}
 		&-title {
 			margin-top: 1em;
-
+			font-size: 1.4rem;
 			color: rgb(232, 230, 230);
 			text-align: center;
 		}
@@ -566,11 +548,14 @@ body {
 		&__box {
 			padding-bottom: 1em;
 
-			width: 40%;
 			&-btn {
 				bottom: 2em;
 			}
 		}
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: block;
 	}
 }
 
@@ -586,10 +571,10 @@ body {
 		&__boxes {
 			flex-wrap: wrap;
 			flex-direction: row;
-			justify-content: space-evenly;
+			
 		}
 		&__box {
-			width: 40%;
+			width: 50%;
 		}
 	}
 	.why-us {
@@ -615,8 +600,8 @@ body {
 			flex-wrap: wrap;
 			flex-direction: row;
 		}
-		&__box {
-			width: 27%;
+		&__box{
+			width: 60%;
 		}
 	}
 	.contact {
@@ -655,13 +640,13 @@ body {
 	@media (min-width: 992px) {
 		.mortgages {
 			&__boxes {
-				flex-wrap: wrap;
+				// flex-wrap: wrap;
 				flex-direction: row;
-				justify-content: space-evenly;
+				justify-content: center;
 			}
 			&__box {
 				height: 480px;
-				width: 27%;
+				width: 70%;
 			}
 		}
 		.why-us {
@@ -678,4 +663,5 @@ body {
 			}
 		}
 	}
+
 }
