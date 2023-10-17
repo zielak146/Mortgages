@@ -7,9 +7,10 @@
 }
 
 .section-padding {
-	padding: 6em 2em;
+	padding: 7em 2em;
 }
 .section-heading {
+	margin: 0.5em;
 	font-size: 2rem;
 	letter-spacing: -2px;
 	text-align: center;
@@ -25,12 +26,17 @@
 }
 .container {
 	margin: 0 auto;
-	max-width: 800px;
+	max-width: 1000px;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	
 }
 
 .white-section {
+	gap:4em;
+	padding: 4em 2em;
 	background-color: rgb(232, 230, 230);
 }
 
@@ -44,8 +50,8 @@
 		bottom: -2px;
 		left: -50px;
 		transform: skew(45deg);
-		&--blue {
-			background-color: $main-color;
+		&--gray {
+			background-color: $secondary-color;
 		}
 	}
 	&-right {
@@ -57,7 +63,7 @@
 
 .hidden {
 	opacity: 0;
-	transform: translateX(-100%);
+	transform: translateX(-101%);
 	filter: blur(5px);
 	transition: all 2s;
 }
@@ -68,10 +74,12 @@
 	filter: blur(0);
 }
 
+
+
 .swiper-wrapper {
 	height: 100%;
 	width: 100%;
-	display: flex;
+	
 }
 
 .swiper-slide {
@@ -79,6 +87,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 2em;
 }
 
 .swiper-scrollbar {
@@ -87,7 +96,8 @@
 	background-color: white;
 }
 .swiper-pagination {
-	background-color: white;
+	color: white
+
 }
 .swiper-button-next,
 .swiper-button-prev {

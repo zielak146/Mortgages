@@ -96,12 +96,14 @@ body {
 	background-position: top;
 	&-logo {
 		position: absolute;
-		top: 20%;
+		top: 30%;
+
+		transform: translate(-50%, -50%);
 		background-image: url('../img/housefy.svg');
 		height: 300px;
 		width: 300px;
 		background-position: center;
-		background-size: contain;
+		background-size: cover;
 
 		background-repeat: no-repeat;
 	}
@@ -135,6 +137,7 @@ body {
 			text-align: center;
 		}
 		&-lead {
+			text-align: center;
 			font-size: 1.4rem;
 			color: rgb(232, 230, 230);
 		}
@@ -226,7 +229,7 @@ body {
 		align-content: center;
 		background: $header-gradient, $main-color;
 		width: 90%;
-		height: 100%;
+		height: 260px;
 
 		padding: 2.5em 1.5em;
 		border-radius: 15px;
@@ -248,29 +251,18 @@ body {
 			font-size: 1.2rem;
 			color: rgb(232, 230, 230);
 		}
-		&-leads {
-			margin-top: 2em;
-			&-text {
-				font-size: 1.4rem;
-				margin: 0.5em auto;
-				text-align: center;
-				max-width: 900px;
-				color: $main-color;
-			}
-		}
+		
 	}
 }
 .reviews {
-	padding: 8em 2em;
+	padding: 6em 2em;
 	position: relative;
 	overflow: hidden;
 	background: $header-gradient2, url('../img/architecture-2256489_1920.jpg');
 	background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;
-	.section-heading {
-		color: white;
-	}
+	
 	&__boxes {
 		margin-top: 1em;
 		display: flex;
@@ -323,7 +315,7 @@ body {
 		&-name {
 			text-align: center;
 			font-weight: bold;
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 			color: white;
 		}
 	}
@@ -414,7 +406,6 @@ body {
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		
 	}
 	&__box {
 		text-align: center;
@@ -441,7 +432,9 @@ body {
 }
 
 .footer {
-	background: $header-gradient-blue, url('../img/23485395_44.jpeg');
+	position: relative;
+	overflow: hidden;
+	background: $secondary-color;
 	background-size: cover;
 	background-position: center;
 
@@ -467,7 +460,7 @@ body {
 		}
 		&-heading {
 			text-align: center;
-			color: white;
+			color: $main-color;
 		}
 		&-links {
 			display: flex;
@@ -495,7 +488,7 @@ body {
 			text-decoration: none;
 			transition: all 0.4s;
 			&:hover {
-				color: rgb(232, 230, 230);
+				color: $main-color;
 				scale: 1.1;
 			}
 
@@ -533,7 +526,7 @@ body {
 		&-logo {
 			height: 500px;
 			width: 500px;
-			top: 5%;
+			top: 15%;
 		}
 	}
 	.mortgages {
@@ -543,6 +536,9 @@ body {
 		}
 		&__box {
 			width: 50%;
+			&-text {
+				font-size: 1.4rem;
+			}
 		}
 	}
 	.why-us {
@@ -551,7 +547,11 @@ body {
 			flex-direction: row;
 		}
 		&__box {
+			height: 280px;
 			width: 40%;
+			&-text {
+				font-size: 1.4rem;
+			}
 		}
 	}
 	.reviews {
@@ -561,6 +561,9 @@ body {
 		}
 		&__box {
 			width: 40%;
+			&-text {
+				font-size: 1.4rem;
+			}
 		}
 	}
 	.team {
@@ -573,15 +576,9 @@ body {
 		}
 	}
 	.contact {
-		
-			
-	
-			&__box{
-				width: 80%;
-			}
-		
-		
-	
+		&__box {
+			width: 80%;
+		}
 	}
 	.footer {
 		&__boxes {
@@ -598,6 +595,10 @@ body {
 	}
 
 	@media (min-width: 992px) {
+
+		.section-heading{
+			font-size: 2.6rem;
+		}
 		.mortgages {
 			&__boxes {
 				// flex-wrap: wrap;
@@ -620,17 +621,10 @@ body {
 			}
 		}
 		.contact {
-		
-			
-	
-			&__box{
-				
+			&__box {
 				width: 50%;
 			}
-		
-		
-	
-	}
+		}
 	}
 
 	@media (min-width: 1300px) {
