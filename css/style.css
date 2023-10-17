@@ -543,9 +543,9 @@ body {
   margin-top: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 3em;
+  gap: 1em;
 }
 .team__box {
   position: relative;
@@ -599,65 +599,34 @@ body {
 .contact .section-heading {
   color: white;
 }
+.contact .lead {
+  color: white;
+}
 .contact__boxes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
 }
 .contact__box {
-  width: 50%;
-  margin-top: 5em;
-  display: flex;
-  flex-direction: column;
-}
-.contact__box-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-.contact__box-info-details {
-  margin-top: 1em;
   text-align: center;
-  color: white;
-}
-.contact__box-info-details-icon {
-  font-size: 2rem;
-}
-.contact__box-form {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.contact__box-form label {
-  margin-top: 1em;
-  text-transform: uppercase;
-  color: white;
-  text-align: center;
-}
-.contact__box-form textarea,
-.contact__box-form input {
+  padding: 0 1em;
+  background-color: white;
   border-radius: 8px;
-  border: none;
   width: 100%;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
-.contact__box-form input {
-  height: 30px;
+.contact__box-icon {
+  align-self: center;
+  color: rgb(56, 182, 255);
+  font-size: 2.4rem;
 }
-.contact__box-form textarea {
-  height: 200px;
-}
-.contact__box-form button {
-  text-transform: uppercase;
-  width: 40%;
-  margin-top: 1em;
-  border: none;
-  border-radius: 8px;
-  padding: 1em 1.5em;
+.contact__box-text {
+  font-size: 1.4rem;
+  color: rgb(56, 182, 255);
 }
 
 .footer {
@@ -757,14 +726,14 @@ body {
     flex-direction: row;
   }
   .why-us__box {
-    width: 27%;
+    width: 40%;
   }
   .reviews__boxes {
     flex-wrap: wrap;
     flex-direction: row;
   }
   .reviews__box {
-    width: 27%;
+    width: 40%;
   }
   .team__boxes {
     flex-wrap: wrap;
@@ -773,22 +742,8 @@ body {
   .team__box {
     width: 60%;
   }
-  .contact__boxes {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
   .contact__box {
-    width: 40%;
-  }
-  .contact__box-info {
-    flex-direction: column;
-  }
-  .contact__box-info-details {
-    margin: 0.5em;
-  }
-  .contact__box-form {
-    width: 40%;
+    width: 80%;
   }
   .footer__boxes {
     flex-direction: row;
@@ -806,11 +761,16 @@ body {
     justify-content: center;
   }
   .mortgages__box {
-    height: 480px;
     width: 70%;
   }
   .why-us__box {
-    height: 270px;
+    width: 27%;
+  }
+  .reviews__box {
+    width: 27%;
+  }
+  .contact__box {
+    width: 50%;
   }
 }
 @media (min-width: 767px) and (min-width: 1300px) {

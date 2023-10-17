@@ -345,9 +345,9 @@ body {
 		margin-top: 1em;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
-		gap: 3em;
+		gap: 1em;
 	}
 	&__box {
 		position: relative;
@@ -405,68 +405,37 @@ body {
 	.section-heading {
 		color: white;
 	}
+	.lead {
+		color: white;
+	}
+
 	&__boxes {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		gap: 1em;
+		
 	}
 	&__box {
-		width: 50%;
-		margin-top: 5em;
+		text-align: center;
+		padding: 0 1em;
+		background-color: white;
+		border-radius: 8px;
+		width: 100%;
+		margin-top: 2em;
 		display: flex;
-		flex-direction: column;
-		&-info {
-			display: flex;
-			// margin: 2em;
+		justify-content: center;
+		gap: 1em;
 
-			flex-direction: column;
-			justify-content: center;
-			align-content: center;
+		&-icon {
+			align-self: center;
 
-			&-details {
-				margin-top: 1em;
-				text-align: center;
-				color: white;
-				&-icon {
-					font-size: 2rem;
-				}
-			}
+			color: $main-color;
+			font-size: 2.4rem;
 		}
-		&-form {
-			width: 80%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			label {
-				margin-top: 1em;
-				text-transform: uppercase;
-				color: white;
-				text-align: center;
-				// font-size: 1.4rem;
-			}
-			textarea,
-			input {
-				border-radius: 8px;
-				border: none;
-				width: 100%;
-			}
-			input {
-				height: 30px;
-			}
-			textarea {
-				height: 200px;
-			}
-			button {
-				text-transform: uppercase;
-				width: 40%;
-				margin-top: 1em;
-				border: none;
-				border-radius: 8px;
-				padding: 1em 1.5em;
-			}
+		&-text {
+			font-size: 1.4rem;
+			color: $main-color;
 		}
 	}
 }
@@ -571,7 +540,6 @@ body {
 		&__boxes {
 			flex-wrap: wrap;
 			flex-direction: row;
-			
 		}
 		&__box {
 			width: 50%;
@@ -583,7 +551,7 @@ body {
 			flex-direction: row;
 		}
 		&__box {
-			width: 27%;
+			width: 40%;
 		}
 	}
 	.reviews {
@@ -592,7 +560,7 @@ body {
 			flex-direction: row;
 		}
 		&__box {
-			width: 27%;
+			width: 40%;
 		}
 	}
 	.team {
@@ -600,28 +568,20 @@ body {
 			flex-wrap: wrap;
 			flex-direction: row;
 		}
-		&__box{
+		&__box {
 			width: 60%;
 		}
 	}
 	.contact {
-		&__boxes {
-			flex-wrap: wrap;
-			flex-direction: row;
-			justify-content: space-evenly;
-		}
-		&__box {
-			width: 40%;
-			&-info {
-				flex-direction: column;
-				&-details {
-					margin: 0.5em;
-				}
+		
+			
+	
+			&__box{
+				width: 80%;
 			}
-			&-form {
-				width: 40%;
-			}
-		}
+		
+		
+	
 	}
 	.footer {
 		&__boxes {
@@ -645,15 +605,32 @@ body {
 				justify-content: center;
 			}
 			&__box {
-				height: 480px;
+				// height: 480px;
 				width: 70%;
 			}
 		}
 		.why-us {
 			&__box {
-				height: 270px;
+				width: 27%;
 			}
 		}
+		.reviews {
+			&__box {
+				width: 27%;
+			}
+		}
+		.contact {
+		
+			
+	
+			&__box{
+				
+				width: 50%;
+			}
+		
+		
+	
+	}
 	}
 
 	@media (min-width: 1300px) {
@@ -663,5 +640,4 @@ body {
 			}
 		}
 	}
-
 }
