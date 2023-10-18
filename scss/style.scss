@@ -143,11 +143,9 @@ body {
 		}
 	}
 	&__boxes {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 1em;
+		display: grid;
+	grid-template-columns: repeat(3,1fr) ;
+	gap: 2em;
 	}
 	&__box {
 		position: relative;

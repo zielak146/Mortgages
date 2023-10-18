@@ -353,11 +353,9 @@ body {
   color: rgb(232, 230, 230);
 }
 .mortgages__boxes {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
 }
 .mortgages__box {
   position: relative;
