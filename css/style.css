@@ -34,14 +34,14 @@
 .white-section {
   gap: 4em;
   padding: 4em 2em;
-  background-color: rgb(232, 230, 230);
+  background-color: white;
 }
 
 .white-block {
   position: absolute;
   height: 35px;
   width: 60%;
-  background-color: rgb(232, 230, 230);
+  background-color: white;
 }
 .white-block-left {
   bottom: -2px;
@@ -73,6 +73,7 @@
 .swiper-wrapper {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .swiper-slide {
@@ -354,21 +355,19 @@ body {
 }
 .mortgages__boxes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
+  grid-template-columns: 1fr;
+  gap: 1em;
 }
 .mortgages__box {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-evenly;
   align-content: center;
-  width: 100%;
-  height: 450px;
   background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
   margin-bottom: 2em;
   border-radius: 8px;
-  padding: 1em;
+  padding: 2em 1em;
   transition: scale 0.7s;
 }
 .mortgages__box-icon {
@@ -393,8 +392,6 @@ body {
 .mortgages__box-btn {
   cursor: pointer;
   margin-top: 2em;
-  position: absolute;
-  bottom: 2em;
   align-self: center;
   border-radius: 8px;
   background-color: white;
@@ -412,15 +409,13 @@ body {
 }
 
 .why-us {
-  background: rgb(232, 230, 230);
+  background: white;
 }
 .why-us__boxes {
   margin-top: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
 }
 .why-us__box {
   overflow: hidden;
@@ -429,29 +424,25 @@ body {
   flex-direction: column;
   justify-content: start;
   align-content: center;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
-  width: 90%;
-  height: 260px;
   padding: 2.5em 1.5em;
-  border-radius: 15px;
 }
 .why-us__box-icon {
   text-align: center;
   font-size: 3rem;
-  color: white;
+  color: rgb(56, 182, 255);
   margin-bottom: 0.3em;
 }
 .why-us__box-heading {
   text-align: center;
   font-size: 1.6rem;
   margin-bottom: 0.3em;
-  color: white;
+  color: rgb(56, 182, 255);
 }
 .why-us__box-text {
   text-align: center;
   padding: 1em;
   font-size: 1.2rem;
-  color: rgb(232, 230, 230);
+  color: rgb(56, 182, 255);
 }
 
 .reviews {
@@ -465,27 +456,20 @@ body {
 }
 .reviews__boxes {
   margin-top: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
 }
 .reviews__box {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-content: center;
   background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
-  width: 90%;
-  height: 100%;
   padding: 1em;
   border-radius: 15px;
   transition: scale 0.7s;
-}
-.reviews__box:hover {
-  scale: 1.1;
 }
 .reviews__box-img {
   border: 5px solid white;
@@ -497,13 +481,13 @@ body {
   border-radius: 50%;
 }
 .reviews__box-img--one {
-  background-image: url("../img/1.jpg");
+  background-image: url("../img/review-1.jpg");
 }
 .reviews__box-img--two {
-  background-image: url("../img/2.jpg");
+  background-image: url("../img/review-2.jpg");
 }
 .reviews__box-img--three {
-  background-image: url("../img/3.jpg");
+  background-image: url("../img/review-3.jpg");
 }
 .reviews__box-text {
   margin-top: 1em;
@@ -533,11 +517,9 @@ body {
 }
 .team__boxes {
   margin-top: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
 }
 .team__box {
   position: relative;
@@ -546,8 +528,6 @@ body {
   justify-content: start;
   align-content: center;
   background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
-  width: 90%;
-  height: 100%;
   padding: 1em;
   border-radius: 15px;
   transition: scale 0.7s;
@@ -560,6 +540,9 @@ body {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+}
+.team__box-img--ceo {
+  background-image: url("../img/ceo.jpg");
 }
 .team__box-img--one {
   background-image: url("../img/1.jpg");
@@ -624,7 +607,7 @@ body {
 .footer {
   position: relative;
   overflow: hidden;
-  background: rgba(79, 79, 82, 0.853);
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.6), rgba(0, 0, 0, 0.6)), rgb(56, 182, 255);
   background-size: cover;
   background-position: center;
 }
@@ -642,10 +625,10 @@ body {
 }
 .footer__box-logo {
   background-image: url("../img/housefy-white.png");
-  height: 300px;
+  height: 400px;
   background-position: center;
   background-size: cover;
-  width: 300px;
+  width: 400px;
   background-repeat: no-repeat;
   align-self: center;
 }
@@ -683,105 +666,4 @@ body {
 .footer__box-link i {
   font-size: 1.4rem;
   margin-right: 0.5em;
-}
-
-@media (min-width: 576px) {
-  .mortgages__boxes {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .mortgages__box {
-    padding-bottom: 1em;
-  }
-  .mortgages__box-btn {
-    bottom: 2em;
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: block;
-  }
-}
-@media (min-width: 767px) {
-  .header-logo {
-    height: 500px;
-    width: 500px;
-    top: 15%;
-  }
-  .mortgages__boxes {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .mortgages__box {
-    width: 50%;
-  }
-  .mortgages__box-text {
-    font-size: 1.4rem;
-  }
-  .why-us__boxes {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .why-us__box {
-    height: 280px;
-    width: 40%;
-  }
-  .why-us__box-text {
-    font-size: 1.4rem;
-  }
-  .reviews__boxes {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .reviews__box {
-    width: 40%;
-  }
-  .reviews__box-text {
-    font-size: 1.4rem;
-  }
-  .team__boxes {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .team__box {
-    width: 60%;
-  }
-  .contact__box {
-    width: 80%;
-  }
-  .footer__boxes {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .footer__box-links {
-    flex-direction: row;
-    gap: 4em;
-  }
-}
-@media (min-width: 767px) and (min-width: 992px) {
-  .section-heading {
-    font-size: 2.6rem;
-  }
-  .mortgages__boxes {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .mortgages__box {
-    width: 70%;
-  }
-  .why-us__box {
-    width: 27%;
-  }
-  .reviews__box {
-    width: 27%;
-  }
-  .contact__box {
-    width: 50%;
-  }
-}
-@media (min-width: 767px) and (min-width: 1300px) {
-  .mortgages__box {
-    height: 430px;
-  }
 }/*# sourceMappingURL=style.css.map */

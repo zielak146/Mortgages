@@ -1,0 +1,146 @@
+
+@media (min-width: 767px) {
+	.header {
+		&-logo {
+			height: 500px;
+			width: 500px;
+			top: 15%;
+		}
+	}
+	.mortgages {
+		&__boxes {
+			display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+		}
+		&__box {
+			
+			&-text {
+				font-size: 1.4rem;
+			}
+		}
+	}
+	.why-us {
+		&__boxes {
+			display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+       
+		}
+		&__box {
+            &:nth-of-type(3){
+                justify-self: center;
+                grid-column: 1/3;
+            }
+			
+			&-text {
+				font-size: 1.4rem;
+			}
+		}
+	}
+    .team{
+        &__boxes {
+			display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            ;
+       
+		}
+		
+    }
+	.reviews {
+		&__boxes {
+			display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-content: center;
+            // align-items: center;
+            gap: 1em;
+            padding: 1em;
+       
+		}
+		&__box {
+            &:nth-of-type(3){
+                justify-self: center;
+                align-self: center;
+               height: 70%;
+                grid-row: 1/3;
+            }
+			
+			&-text {
+                align-items: center;
+				font-size: 1.4rem;
+			}
+		}
+	}
+	
+	.contact {
+		&__box {
+			width: 80%;
+		}
+	}
+	.footer {
+		&__boxes {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+		}
+		&__box {
+			&-links {
+				flex-direction: row;
+				gap: 4em;
+			}
+		}
+	}
+
+	@media (min-width: 992px) {
+		.section-heading {
+			font-size: 2.6rem;
+		}
+    }
+	// 	.why-us {
+	// 		&__boxes {
+				
+	// 		}
+	// 	}
+	// 	.reviews {
+	// 		&__box {
+				
+	// 		}
+	// 	}
+	// 	.contact {
+	// 		&__box {
+				
+	// 		}
+	// 	}
+	// }
+
+	@media (min-width: 1100px) {
+		.mortgages {
+			&__boxes {
+                display: grid;
+                grid-template-columns: 30% 30% 30%;
+                justify-content: center;
+            }
+		}
+        .team{
+            &__boxes {
+                display: grid;
+                grid-template-columns: repeat(3, 30%);
+                justify-content: center;
+                align-items: center;
+            }
+            &__box{
+                &:nth-of-type(1){
+                    width: 50%;
+                    justify-self: center;
+                    grid-column: 1/4;
+                }
+            }
+        }
+	}
+}
