@@ -1,7 +1,7 @@
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
 }
 
 .section-padding {
@@ -330,7 +330,7 @@ body {
 .mortgages {
   overflow: hidden;
   position: relative;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.85), rgba(0, 0, 0, 0.7)), url("../img/shibuyasky-4768679_1920.jpg");
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.85), rgba(0, 0, 0, 0.8)), url("../img/shibuyasky-4768679_1920.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -356,37 +356,37 @@ body {
 .mortgages__boxes {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1em;
+  gap: 2em;
 }
 .mortgages__box {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-content: center;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
-  margin-bottom: 2em;
-  border-radius: 8px;
+  border-radius: 15px;
   padding: 2em 1em;
   transition: scale 0.7s;
+}
+.mortgages__box:hover {
+  scale: 1.1;
 }
 .mortgages__box-icon {
   margin-top: 0.5em;
   text-align: center;
   font-size: 3rem;
-  color: white;
+  color: rgb(56, 182, 255);
   margin-bottom: 0.3em;
 }
 .mortgages__box-heading {
   text-align: center;
   font-size: 1.6rem;
   margin-bottom: 0.3em;
-  color: white;
+  color: rgb(56, 182, 255);
 }
 .mortgages__box-text {
   text-align: center;
-  padding: 1em;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: rgb(232, 230, 230);
 }
 .mortgages__box-btn {
@@ -394,7 +394,7 @@ body {
   margin-top: 2em;
   align-self: center;
   border-radius: 8px;
-  background-color: white;
+  background-color: rgb(56, 182, 255);
   border: none;
   padding: 1em 1.5em;
   transition: opacity 0.4s;
@@ -403,7 +403,7 @@ body {
   opacity: 0.7;
 }
 .mortgages__box-btn a {
-  color: rgb(56, 182, 255);
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -437,11 +437,11 @@ body {
   font-size: 1.6rem;
   margin-bottom: 0.3em;
   color: rgb(56, 182, 255);
+  font-weight: 700;
 }
 .why-us__box-text {
   text-align: center;
-  padding: 1em;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: rgb(56, 182, 255);
 }
 
@@ -449,7 +449,7 @@ body {
   padding: 6em 2em;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.85), rgba(0, 0, 0, 0.7)), url("../img/architecture-2256489_1920.jpg");
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.85), rgba(0, 0, 0, 0.8)), url("../img/architecture-2256489_1920.jpg");
   background-size: cover;
   background-size: cover;
   background-attachment: fixed;
@@ -466,13 +466,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
   padding: 1em;
   border-radius: 15px;
   transition: scale 0.7s;
 }
 .reviews__box-img {
-  border: 5px solid white;
+  border: 5px solid rgb(56, 182, 255);
   align-self: center;
   background-size: cover;
   background-position: center;
@@ -489,24 +488,27 @@ body {
 .reviews__box-img--three {
   background-image: url("../img/review-3.jpg");
 }
+.reviews__box-img--four {
+  background-image: url("../img/review-4.jpg");
+}
 .reviews__box-text {
-  margin-top: 1em;
-  padding: 1em;
+  margin-top: 0.5em;
   color: rgb(232, 230, 230);
   text-align: center;
+  font-size: 1.4rem;
 }
 .reviews__box-name {
   text-align: center;
   font-weight: bold;
-  font-size: 1.4rem;
-  color: white;
+  font-size: 1.6rem;
+  color: rgb(56, 182, 255);
 }
 
 .team {
   padding: 6em 2em;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.85), rgba(0, 0, 0, 0.7)), url("../img/interior-5114392_1920.jpg");
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.85), rgba(0, 0, 0, 0.8)), url("../img/interior-5114392_1920.jpg");
   background-size: cover;
   background-size: cover;
   background-attachment: fixed;
@@ -555,14 +557,14 @@ body {
 }
 .team__box-title {
   margin-top: 1em;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: rgb(232, 230, 230);
   text-align: center;
 }
 .team__box-name {
   text-align: center;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: white;
 }
 
@@ -634,6 +636,7 @@ body {
 }
 .footer__box-heading {
   text-align: center;
+  font-size: 1.6rem;
   color: rgb(56, 182, 255);
 }
 .footer__box-links {
@@ -653,7 +656,7 @@ body {
   justify-content: center;
   align-content: center;
   padding: 0.5em;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   cursor: pointer;
   color: white;
   text-decoration: none;

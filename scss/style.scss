@@ -145,40 +145,44 @@ body {
 	&__boxes {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 1em;
+		gap: 2em;
 	}
 	&__box {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
+		justify-content: space-around;
 		align-content: center;
 
-		background: $header-gradient, $main-color;
-		margin-bottom: 2em;
-		border-radius: 8px;
+		// background: $header-gradient, $main-color;
+		border-radius: 15px;
 		padding: 2em 1em;
 		transition: scale 0.7s;
+		
+		// border: 4px solid $main-color;
+		&:hover{
+			scale: 1.1;
+		}
 
 		&-icon {
 			margin-top: 0.5em;
 			text-align: center;
 			font-size: 3rem;
-			color: white;
+			color: $main-color;
 			margin-bottom: 0.3em;
 		}
 		&-heading {
 			text-align: center;
 			font-size: 1.6rem;
 			margin-bottom: 0.3em;
-			color: white;
+			color: $main-color;
 		}
 		&-text {
 			text-align: center;
-			padding: 1em;
-			font-size: 1.2rem;
+			
+			font-size: 1.4rem;
 			color: rgb(232, 230, 230);
-			// margin-bottom: 1em;
+			
 		}
 		&-btn {
 			cursor: pointer;
@@ -189,7 +193,7 @@ body {
 			align-self: center;
 
 			border-radius: 8px;
-			background-color: white;
+			background-color: $main-color;
 			border: none;
 			padding: 1em 1.5em;
 			transition: opacity 0.4s;
@@ -198,7 +202,7 @@ body {
 			}
 
 			a {
-				color: $main-color;
+				color: white;
 				text-decoration: none;
 				text-transform: uppercase;
 			}
@@ -236,12 +240,14 @@ body {
 			font-size: 1.6rem;
 			margin-bottom: 0.3em;
 			color: $main-color;
+			font-weight: 700;
 		}
 		&-text {
 			text-align: center;
-			padding: 1em;
-			font-size: 1.2rem;
+			// padding: 1em;
+			font-size: 1.4rem;
 			color: $main-color;
+			
 		}
 	}
 }
@@ -268,7 +274,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-content: center;
-		background: $header-gradient, $main-color;
+		// background: $header-gradient, $main-color;
 		
 
 		// border: 2px solid white;
@@ -277,12 +283,13 @@ body {
 		transition: scale 0.7s;
 		
 		&-img {
-			border: 5px solid white;
+			border: 5px solid $main-color;
 			align-self: center;
 			background-size: cover;
 			background-position: center;
 			height: 150px;
 			width: 150px;
+			
 			border-radius: 50%;
 			&--one {
 				background-image: url('../img/review-1.jpg');
@@ -293,18 +300,23 @@ body {
 			&--three {
 				background-image: url('../img/review-3.jpg');
 			}
+			&--four {
+				background-image: url('../img/review-4.jpg');
+			}
 		}
 		&-text {
-			margin-top: 1em;
-			padding: 1em;
+			margin-top: 0.5em;
+			// padding: 0.5em;
 			color: rgb(232, 230, 230);
+			// font-weight: 700;
 			text-align: center;
+			font-size: 1.4rem;
 		}
 		&-name {
 			text-align: center;
 			font-weight: bold;
-			font-size: 1.4rem;
-			color: white;
+			font-size: 1.6rem;
+			color: $main-color;
 		}
 	}
 }
@@ -366,14 +378,14 @@ body {
 		}
 		&-title {
 			margin-top: 1em;
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 			color: rgb(232, 230, 230);
 			text-align: center;
 		}
 		&-name {
 			text-align: center;
 			font-weight: bold;
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 			color: white;
 		}
 	}
@@ -451,6 +463,7 @@ body {
 
 		&-heading {
 			text-align: center;
+			font-size: 1.6rem;
 			color: $main-color;
 		}
 		&-links {
@@ -473,7 +486,7 @@ body {
 			justify-content: center;
 			align-content: center;
 			padding: 0.5em;
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 			cursor: pointer;
 			color: white;
 			text-decoration: none;
