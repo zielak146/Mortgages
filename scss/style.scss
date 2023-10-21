@@ -1,6 +1,10 @@
 @use '../scss/colors' as *;
 @use '../scss/components' as *;
 
+html {
+	font-size: 62.5%;
+}
+
 body {
 	margin: 0 auto;
 	padding: 0;
@@ -36,7 +40,7 @@ body {
 	&_item {
 		color: $main-color;
 		text-decoration: none;
-		font-size: 1.4rem;
+		font-size: 4rem;
 		text-transform: uppercase;
 	}
 }
@@ -49,6 +53,7 @@ body {
 .burger-btn {
 	position: absolute;
 	top: 20px;
+	padding: 0.5em;
 	right: 20px;
 	z-index: 31;
 	font-size: 36px;
@@ -133,78 +138,81 @@ body {
 		align-items: center;
 		&-heading {
 			color: white;
-			font-size: 2rem;
+			font-size: 4rem;
 			text-align: center;
+			
 		}
 		&-lead {
 			text-align: center;
-			font-size: 1.4rem;
+			font-size: $standard;
+			padding: 0 1em;
 			color: rgb(232, 230, 230);
 		}
 	}
 	&__boxes {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 2em;
+		gap: 2em 2em;
+		padding-bottom: 5em;
 	}
 	&__box {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
-		align-content: center;
+		justify-content: center;
+		align-content: space-evenly;
 
-		// background: $header-gradient, $main-color;
-		border-radius: 15px;
-		padding: 2em 1em;
+		// margin-bottom: 2em;
+		padding: 2em;
 		transition: scale 0.7s;
-		
-		// border: 4px solid $main-color;
-		&:hover{
-			scale: 1.1;
+		border-top: 4px dotted $main-color;
+
+		&:nth-of-type(1) {
+			border: none;
 		}
 
 		&-icon {
 			margin-top: 0.5em;
 			text-align: center;
-			font-size: 3rem;
+			font-size: 5rem;
 			color: $main-color;
 			margin-bottom: 0.3em;
 		}
 		&-heading {
 			text-align: center;
-			font-size: 1.6rem;
+			font-size: 3rem;
 			margin-bottom: 0.3em;
+			text-transform: uppercase;
 			color: $main-color;
 		}
 		&-text {
 			text-align: center;
-			
-			font-size: 1.4rem;
+		
+			font-size: $standard;
 			color: rgb(232, 230, 230);
-			
+			margin-bottom: 1em;
 		}
 		&-btn {
 			cursor: pointer;
-			margin-top: 2em;
-			// position: absolute;
-			// bottom: 2em;
-
+			margin-top: auto;
 			align-self: center;
+			font-size: 1.6rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+			color: white;
+			text-decoration: none;
 
 			border-radius: 8px;
-			background-color: $main-color;
+			background: none;
+			background-color: rgba(56, 182, 255, 0.334);
 			border: none;
-			padding: 1em 1.5em;
-			transition: opacity 0.4s;
+			padding: 1em 3em;
+			overflow: hidden;
+			transition: all 0.4s;
 			&:hover {
-				opacity: 0.7;
-			}
-
-			a {
-				color: white;
-				text-decoration: none;
-				text-transform: uppercase;
+				background: none;
+				box-shadow: 2px 2px 0 0 white, inset 11px 6px 10px rgba(0, 0, 0, 0.2);
 			}
 		}
 	}
@@ -216,7 +224,7 @@ body {
 		margin-top: 1em;
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 1em;
+		gap: 3em;
 	}
 
 	&__box {
@@ -227,17 +235,17 @@ body {
 		justify-content: start;
 		align-content: center;
 
-		padding: 2.5em 1.5em;
+		padding: 1.5em 1.5em;
 
 		&-icon {
 			text-align: center;
-			font-size: 3rem;
+			font-size: 5rem;
 			color: $main-color;
 			margin-bottom: 0.3em;
 		}
 		&-heading {
 			text-align: center;
-			font-size: 1.6rem;
+			font-size: 2.8rem;
 			margin-bottom: 0.3em;
 			color: $main-color;
 			font-weight: 700;
@@ -245,9 +253,8 @@ body {
 		&-text {
 			text-align: center;
 			// padding: 1em;
-			font-size: 1.4rem;
+			font-size: $standard;
 			color: $main-color;
-			
 		}
 	}
 }
@@ -260,14 +267,13 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 
-	
-		&__boxes {
-			margin-top: 1em;
-			display: grid;
-			grid-template-columns: 1fr;
-			gap: 2em;
-		}
-	
+	&__boxes {
+		margin-top: 1em;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2em;
+	}
+
 	&__box {
 		position: relative;
 		display: flex;
@@ -275,13 +281,12 @@ body {
 		justify-content: center;
 		align-content: center;
 		// background: $header-gradient, $main-color;
-		
 
 		// border: 2px solid white;
 		padding: 1em;
 		border-radius: 15px;
 		transition: scale 0.7s;
-		
+
 		&-img {
 			border: 5px solid $main-color;
 			align-self: center;
@@ -289,7 +294,7 @@ body {
 			background-position: center;
 			height: 150px;
 			width: 150px;
-			
+
 			border-radius: 50%;
 			&--one {
 				background-image: url('../img/review-1.jpg');
@@ -306,16 +311,16 @@ body {
 		}
 		&-text {
 			margin-top: 0.5em;
-			// padding: 0.5em;
+
 			color: rgb(232, 230, 230);
 			// font-weight: 700;
 			text-align: center;
-			font-size: 1.4rem;
+			font-size: $standard;
 		}
 		&-name {
 			text-align: center;
 			font-weight: bold;
-			font-size: 1.6rem;
+			font-size: $standard;
 			color: $main-color;
 		}
 	}
@@ -348,8 +353,6 @@ body {
 		justify-content: start;
 		align-content: center;
 		background: $header-gradient, $main-color;
-		;
-
 		// border: 2px solid white;
 		padding: 1em;
 		border-radius: 15px;
@@ -378,14 +381,14 @@ body {
 		}
 		&-title {
 			margin-top: 1em;
-			font-size: 1.6rem;
+			font-size: 2rem;
 			color: rgb(232, 230, 230);
 			text-align: center;
 		}
 		&-name {
 			text-align: center;
 			font-weight: bold;
-			font-size: 1.4rem;
+			font-size: $standard;
 			color: white;
 		}
 	}
@@ -411,7 +414,7 @@ body {
 	}
 	&__box {
 		text-align: center;
-		padding: 0 1em;
+		padding: 0;
 		background-color: white;
 		border-radius: 8px;
 		width: 100%;
@@ -427,7 +430,7 @@ body {
 			font-size: 2.4rem;
 		}
 		&-text {
-			font-size: 1.4rem;
+			font-size: $standard;
 			color: $main-color;
 		}
 	}
@@ -463,7 +466,7 @@ body {
 
 		&-heading {
 			text-align: center;
-			font-size: 1.6rem;
+			font-size: 2.8rem;
 			color: $main-color;
 		}
 		&-links {
@@ -486,7 +489,7 @@ body {
 			justify-content: center;
 			align-content: center;
 			padding: 0.5em;
-			font-size: 1.4rem;
+			font-size: $standard;
 			cursor: pointer;
 			color: white;
 			text-decoration: none;
@@ -497,7 +500,7 @@ body {
 			}
 
 			i {
-				font-size: 1.4rem;
+				font-size: $standard;
 				margin-right: 0.5em;
 			}
 		}

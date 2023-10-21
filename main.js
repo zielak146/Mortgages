@@ -47,84 +47,31 @@ const observer = new IntersectionObserver((entries) => {
 
 hiddenElements.forEach((el) => observer.observe(el));
 
+
+
 const swiper = new Swiper('.swiper', {
 	// Optional parameters
 	direction: 'horizontal',
-	enabled: 'true',
-	pagination: {
-		el: '.swiper-pagination',
-		type: 'bullets',
-		color:'$main-color',
-	},
-
+	loop: true,
+  
 	// If we need pagination
-	// pagination: {
-	//   el: '.swiper-pagination',
-	// },
+	pagination: {
+	  el: '.swiper-pagination',
 
+	},
+  
 	// Navigation arrows
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+  
+	// And if we need scrollbar
+	scrollbar: {
+	  el: '.swiper-scrollbar',
 	},
 	autoplay: {
 		delay: 3000,
-	},
-
-	// And if we need scrollbar
-	// scrollbar: {
-	//   el: '.swiper-scrollbar',
-	// },
-	slidesPerView: 1,
-	spaceBetween: 1,
-	// Responsive breakpoints
-	breakpoints: {
-		// when window width is >= 320px
-		767: {
-			slidesPerView: 1,
-			spaceBetween: 20,
-		},
-		// when window width is >= 480px
-		992: {
-			slidesPerView: 2,
-			spaceBetween: 0,
-		},
-		1300: {
-			slidesPerView: 4,
-			spaceBetween: 30,
-		},
-		// when window width is >= 640px
-	},
-});
-
-const swiperFirst = new Swiper('.swiper-first', {
-	// Optional parameters
-	direction: 'horizontal',
-	enabled: 'true',
-	pagination: {
-		el: '.swiper-pagination',
-		type: 'bullets',
-	},
-
-	// If we need pagination
-	// pagination: {
-	//   el: '.swiper-pagination',
-	// },
-
-	// Navigation arrows
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	autoplay: {
-		delay: 5000,
-	},
-
-	// And if we need scrollbar
-	// scrollbar: {
-	//   el: '.swiper-scrollbar',
-	// },
-	slidesPerView: 1,
-	spaceBetween: 100,
-	// Responsive breakpoints
-});
+	  },
+  });
+  

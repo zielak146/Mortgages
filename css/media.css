@@ -4,10 +4,11 @@
     width: 500px;
     top: 15%;
   }
-  .mortgages__boxes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+  .mortgages__box {
+    padding: 2em 2em;
+  }
+  .mortgages__box-text {
+    padding: 0 2em;
   }
   .why-us__boxes {
     display: grid;
@@ -36,7 +37,7 @@
   }
   .reviews__boxes {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     gap: 1em;
@@ -64,19 +65,17 @@
   }
 }
 @media (min-width: 767px) and (min-width: 992px) {
-  .section-heading {
-    font-size: 2.6rem;
+  .mortgages__boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 2em 1em;
+  }
+  .mortgages__box:nth-of-type(2) {
+    border: none;
   }
 }
 @media (min-width: 767px) and (min-width: 1100px) {
-  .mortgages__boxes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-  }
-  .mortgages__box-text {
-    font-size: 1.6rem;
-  }
   .why-us__boxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -94,9 +93,6 @@
   .why-us__box:nth-of-type(3) {
     justify-self: center;
     grid-column: 3/4;
-  }
-  .why-us__box-text {
-    font-size: 1.6rem;
   }
   .team__boxes {
     display: grid;
@@ -126,7 +122,30 @@
     align-self: start;
   }
   .reviews__box-text {
-    align-items: center;
-    font-size: 1.6rem;
+    padding: 1em 1.5em;
+  }
+}
+@media (min-width: 1300px) {
+  .section-padding {
+    padding: 7em 2em;
+  }
+  .section-heading {
+    font-size: 4.8rem;
+  }
+  .mortgages .wrapper {
+    max-width: 1600px;
+  }
+  .mortgages__boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 6em 2em;
+  }
+  .mortgages__box {
+    padding: 2em 4em;
+    transition: scale 0.7s;
+  }
+  .mortgages__box:nth-of-type(3) {
+    border: none;
   }
 }/*# sourceMappingURL=media.css.map */
