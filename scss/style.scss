@@ -23,8 +23,8 @@ body {
 	align-items: center;
 	background: none;
 	width: 100%;
-	height: 100%;
-	transform: translateX(100%);
+	height: 100vh;
+	transform: translateY(-100%);
 	filter: blur(5px);
 	transition: all 0.7s;
 	&_items {
@@ -35,18 +35,34 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 2em;
+		gap: 3em;
 	}
 	&_item {
+		position: relative;
+		padding:0 1em;
 		color: $main-color;
 		text-decoration: none;
 		font-size: 3rem;
 		text-transform: uppercase;
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 2px;
+			height: 100%;
+			background-color: $main-color;
+			content: '';
+			transform: scale(0);
+			transition: transform 0.5s;
+		}
+		&:hover::before{
+			transform: scale(1);
+		}
 	}
 }
 
 .active {
-	transform: translate(0);
+	transform: translateY(0);
 	filter: blur(0);
 	transition: 0.7s;
 }
@@ -95,7 +111,7 @@ body {
 	justify-content: center;
 	align-content: center;
 	gap: 1em;
-	
+
 	height: 90vh;
 	width: 100%;
 	background: $light-blue-gradient,
@@ -103,50 +119,48 @@ body {
 	background-size: cover;
 	background-position: top;
 
-	&-brand-name{
+	&-brand-name {
 		text-align: center;
 		text-transform: uppercase;
 		color: $main-color;
 		font-size: 4.8rem;
 		// padding: 0 2em;
 		margin: 0 auto;
-		
 	}
 	&-heading {
 		font-size: 2rem;
 		text-align: center;
 		text-transform: uppercase;
-		
+
 		padding: 0 1em;
 		color: $main-color;
-		
+
 		cursor: pointer;
 	}
-	&-btn{
+	&-btn {
 		cursor: pointer;
-			
-			align-self: center;
-			font-size: 1.6rem;
-			font-weight: bold;
-			text-transform: uppercase;
-			text-align: center;
-			color: white;
-			text-decoration: none;
 
-			border-radius: 8px;
+		align-self: center;
+		font-size: 1.6rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+		text-decoration: none;
+
+		border-radius: 8px;
+		background: none;
+		background-color: rgba(56, 182, 255, 0.334);
+		border: none;
+		padding: 1em 2em;
+		overflow: hidden;
+		transition: all 0.4s;
+		&:hover {
 			background: none;
-			background-color: rgba(56, 182, 255, 0.334);
-			border: none;
-			padding: 1em 2em;
-			overflow: hidden;
-			transition: all 0.4s;
-			&:hover {
-				background: none;
-				box-shadow: 2px 2px 0 0 white, inset 11px 6px 10px rgba(0, 0, 0, 0.2);
-			}
-
+			box-shadow: 2px 2px 0 0 white, inset 11px 6px 10px rgba(0, 0, 0, 0.2);
+		}
 	}
-	&-buttons{
+	&-buttons {
 		display: flex;
 		flex-direction: column;
 		gap: 1em;
@@ -172,7 +186,6 @@ body {
 			color: white;
 			font-size: 4rem;
 			text-align: center;
-			
 		}
 		&-lead {
 			text-align: center;
@@ -219,7 +232,7 @@ body {
 		}
 		&-text {
 			text-align: center;
-		
+
 			font-size: $standard;
 			color: rgb(232, 230, 230);
 			margin-bottom: 1em;
@@ -291,7 +304,6 @@ body {
 	}
 }
 .reviews {
-	
 	position: relative;
 	overflow: hidden;
 	background: $header-gradient2, url('../img/architecture-2256489_1920.jpg');
@@ -347,7 +359,8 @@ body {
 			text-align: center;
 			font-size: $standard;
 		}
-		&-name {margin-bottom: 0.5em;
+		&-name {
+			margin-bottom: 0.5em;
 			text-align: center;
 			font-weight: bold;
 			font-size: $standard;
