@@ -18,7 +18,7 @@ button:focus {
 }
 
 .section-padding {
-  padding: 7em 1em;
+  padding: 8em 1em;
 }
 
 .section-heading {
@@ -27,7 +27,7 @@ button:focus {
   letter-spacing: -2px;
   text-align: center;
   font-weight: bold;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
 }
 
 .lead {
@@ -267,9 +267,9 @@ body {
   gap: 2em;
 }
 .nav_item {
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
@@ -300,7 +300,7 @@ body {
   right: 10px;
   z-index: 20;
   font-size: 24px;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
   background-color: rgb(205, 205, 205);
   border-radius: 8px;
   overflow: hidden;
@@ -320,31 +320,56 @@ body {
   overflow: hidden;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
+  gap: 1em;
   height: 90vh;
   width: 100%;
   background: linear-gradient(45deg, rgba(2, 4, 49, 0.75), rgba(66, 66, 69, 0.75)), url("../img/european-couple-posing-during-pillow-fight-indoor-portrait-laughing-young-people-chilling-living-room(1).jpg");
   background-size: cover;
   background-position: top;
 }
-.header-logo {
-  position: absolute;
-  top: 30%;
-  transform: translate(-50%, -50%);
-  background-image: url("../img/housefy.svg");
-  height: 300px;
-  width: 300px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.header-brand-name {
+  text-align: center;
+  text-transform: uppercase;
+  color: #38b6ff;
+  font-size: 4.8rem;
+  margin: 0 auto;
 }
-.header .arrow {
-  position: absolute;
-  color: rgb(56, 182, 255);
-  bottom: 2em;
-  font-size: 2.4em;
+.header-heading {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 1em;
+  color: #38b6ff;
   cursor: pointer;
+}
+.header-btn {
+  cursor: pointer;
+  align-self: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  background: none;
+  background-color: rgba(56, 182, 255, 0.334);
+  border: none;
+  padding: 1em 2em;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.header-btn:hover {
+  background: none;
+  box-shadow: 2px 2px 0 0 white, inset 11px 6px 10px rgba(0, 0, 0, 0.2);
+}
+.header-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .mortgages {
@@ -388,7 +413,7 @@ body {
   align-content: space-evenly;
   padding: 2em;
   transition: scale 0.7s;
-  border-top: 4px dotted rgb(56, 182, 255);
+  border-top: 4px dotted #38b6ff;
 }
 .mortgages__box:nth-of-type(1) {
   border: none;
@@ -397,7 +422,7 @@ body {
   margin-top: 0.5em;
   text-align: center;
   font-size: 5rem;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
   margin-bottom: 0.3em;
 }
 .mortgages__box-heading {
@@ -405,7 +430,7 @@ body {
   font-size: 3rem;
   margin-bottom: 0.3em;
   text-transform: uppercase;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
 }
 .mortgages__box-text {
   text-align: center;
@@ -457,24 +482,23 @@ body {
 .why-us__box-icon {
   text-align: center;
   font-size: 5rem;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
   margin-bottom: 0.3em;
 }
 .why-us__box-heading {
   text-align: center;
   font-size: 2.8rem;
   margin-bottom: 0.3em;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
   font-weight: 700;
 }
 .why-us__box-text {
   text-align: center;
   font-size: 2.4rem;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
 }
 
 .reviews {
-  padding: 6em 2em;
   position: relative;
   overflow: hidden;
   background: linear-gradient(45deg, rgba(8, 31, 66, 0.85), rgba(0, 0, 0, 0.8)), url("../img/architecture-2256489_1920.jpg");
@@ -486,7 +510,7 @@ body {
   margin-top: 1em;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2em;
+  gap: 2em 3em;
 }
 .reviews__box {
   position: relative;
@@ -494,12 +518,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  margin-bottom: 3em;
   padding: 1em;
   border-radius: 15px;
   transition: scale 0.7s;
 }
 .reviews__box-img {
-  border: 5px solid rgb(56, 182, 255);
+  border: 5px solid #38b6ff;
   align-self: center;
   background-size: cover;
   background-position: center;
@@ -526,10 +551,11 @@ body {
   font-size: 2.4rem;
 }
 .reviews__box-name {
+  margin-bottom: 0.5em;
   text-align: center;
   font-weight: bold;
   font-size: 2.4rem;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
 }
 
 .team {
@@ -557,7 +583,7 @@ body {
   flex-direction: column;
   justify-content: start;
   align-content: center;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), #38b6ff;
   padding: 1em;
   border-radius: 15px;
   transition: scale 0.7s;
@@ -599,7 +625,7 @@ body {
 .contact {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), rgb(56, 182, 255);
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.25), rgba(0, 0, 0, 0.2)), #38b6ff;
 }
 .contact .section-heading {
   color: white;
@@ -626,18 +652,18 @@ body {
 }
 .contact__box-icon {
   align-self: center;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
   font-size: 2.4rem;
 }
 .contact__box-text {
   font-size: 2.4rem;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
 }
 
 .footer {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(45deg, rgba(8, 31, 66, 0.6), rgba(0, 0, 0, 0.6)), rgb(56, 182, 255);
+  background: linear-gradient(45deg, rgba(8, 31, 66, 0.6), rgba(0, 0, 0, 0.6)), #38b6ff;
   background-size: cover;
   background-position: center;
 }
@@ -665,7 +691,7 @@ body {
 .footer__box-heading {
   text-align: center;
   font-size: 2.8rem;
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
 }
 .footer__box-links {
   display: flex;
@@ -691,7 +717,7 @@ body {
   transition: all 0.4s;
 }
 .footer__box-link:hover {
-  color: rgb(56, 182, 255);
+  color: #38b6ff;
   scale: 1.1;
 }
 .footer__box-link i {
